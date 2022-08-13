@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+
+$tablet: 760px;
+$desktop: 1440px;
+
+$font-family: 'Chivo', sans-serif;
+
+//colors
+$green: hsla(157, 74%, 61%, 1);
+$green-hover: hsla(157, 100%, 85%, 1);
+$dark-blue: hsla(224, 26%, 23%, 1);
+$light-blue: hsla(225, 21%, 45%, 1);
+$black: hsla(224, 35%, 11%, 1);
+$white: hsla(0, 0%, 100%, 1);
+$gray: hsla(224, 40%, 83%, 1);
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: $font-family;
+  font-size: 18px;
+  color: $gray;
+  background-color: $black;
+  line-height: 28px;
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.title {
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  text-transform: uppercase;
+  color: $green;
+
+  span {
+    color: $white;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 3.25rem;
+    line-height: 3.875rem;
+  }
+}
+
+#form {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+.input-container {
+  @media (min-width: $tablet) {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+}
+.btn-wrapper {
+  @media (min-width: $tablet) {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+  }
+}
+
+#email {
+  border: none;
+  border-radius: 1.75rem;
+  background: $dark-blue;
+  padding: 1rem;
+  width: 100%;
+  font-size: 0.875rem;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:active,
+  &:focus {
+    color: $white;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 1.3rem;
+  }
+}
+.btn {
+  border: none;
+  border-radius: 1.75rem;
+  padding: 1rem;
+  width: 100%;
+  background: $green;
+  color: $dark-blue;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background: $green-hover;
+  }
+
+  @media (min-width: $tablet) {
+    z-index: 5;
+  }
+}
