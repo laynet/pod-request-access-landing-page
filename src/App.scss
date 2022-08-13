@@ -99,10 +99,10 @@ body::before {
     opacity: 1;
   }
   @media (min-width: $desktop) {
-    background: url('./assets/desktop/image-host.jpg');
-    left: 275px;
+    background: url('./assets/desktop/image-host.jpg') no-repeat right center;
+    // left: 275px;
     background-size: inherit;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     opacity: 1;
   }
 }
@@ -288,13 +288,14 @@ header {
 //   }
 // }
 footer {
+  // display: none;
   grid-area: footer;
 
   img {
     @media (min-width: $desktop) {
       position: absolute;
       right: 0;
-      bottom: 150px;
+      bottom: 21%;
     }
   }
 }
