@@ -63,6 +63,7 @@ function App() {
             emailError={emailError}
           />
         </div>
+        {/* ***************TABLET************** */}
         <div className='grid'>
           <header>
             <img src={logo} className='logo' alt='' />
